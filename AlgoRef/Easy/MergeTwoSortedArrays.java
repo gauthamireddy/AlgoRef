@@ -4,7 +4,7 @@ public static int[] merge(int[] a, int[] b){
 
         while(i < a.length && j < b.length){
 
-        answer[k++] = a[i] < b[i] ? a[i++]:b[j++]
+        answer[k++] = a[i] < b[j] ? a[i++]:b[j++]
         }
 
         while(j< b.length)
