@@ -1,5 +1,5 @@
 public static int[] merge(int[] a, int[] b){
-        int[] ans = new int[a.length+b.length]
+        int[] answer = new int[a.length+b.length]
         int i=0, j=0, k=0;
 
         while(i < a.length && j < b.length){
