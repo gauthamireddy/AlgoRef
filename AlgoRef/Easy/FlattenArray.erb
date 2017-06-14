@@ -1,0 +1,19 @@
+def flattenarray(arr){
+  flattenedarr = [];
+  arr.each do |x| 
+  if x.is_a? Array
+     flattenedarr.concat(x)
+  else
+     flattenedarr << x
+  end
+end
+
+////using built in
+def flattenarray(arr){
+  array.flatten
+end
+
+
+///in js
+var arrays = [["$6"], ["$12"], ["$25"], ["$25"], ["$18"], ["$22"], ["$10"]];
+var merged = [].concat.apply([], arrays);
