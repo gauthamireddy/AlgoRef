@@ -24,3 +24,7 @@ for (int i = 0; i < input.length; i++) {
     }
 }
 System.out.print(" " + current);
+
+uniqueArray = a.filter(function(item, pos) {
+    return a.indexOf(item) == pos;
+})
