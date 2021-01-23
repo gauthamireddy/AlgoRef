@@ -30,3 +30,14 @@ arr = arr.filter(function(item) {
 
 console.log(arr)
 // [ 1, 2, 4, 5 ]
+
+
+let forDeletion = [2, 3, 5]
+
+let arr = [1, 2, 3, 4, 5, 3]
+
+arr = arr.filter(item => !forDeletion.includes(item))
+// !!! Read below about array.includes(...) support !!!
+
+console.log(arr)
+// [ 1, 4 ]
