@@ -33,9 +33,31 @@ function reverseInPlace(str) {
   for (var i = 0; i < words.length; i++) {
      result += words[i].split('').reverse().join('') + " ";
   }
-  return result
-}
-console.log(reverseInPlace("abd fhe kdj"))
+    
+    console.log(reverseInPlace("abd fhe kdj"))
     
     
     //result = what I expect is "dba ehf jdk",
+    
+    //sky is blue = eulb si yks
+    
+    function reverseString(string) {
+  let result = '';
+	let words = string.split(' ');
+  for( let i=words.length-1; i >= 0; i--) {
+  	//result += words[i] + " ";
+    result += reverseInPlace(words[i]) + ' '
+  } 
+  return result;
+}
+
+function reverseInPlace(string) {
+  let indresult =''
+  let wordsind = string.split('');
+  for( let i=wordsind.length-1; i >= 0; i--) {
+    indresult += wordsind[i] + "";
+  }
+  return indresult;
+}
+  return result
+}
