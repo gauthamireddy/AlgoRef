@@ -19,3 +19,14 @@ for (int i = 0; i < input.length; i++) {
     }
 }
 System.out.print(" " + current);
+
+var value = 3
+
+var arr = [1, 2, 3, 4, 5, 3]
+
+arr = arr.filter(function(item) {
+    return item !== value
+})
+
+console.log(arr)
+// [ 1, 2, 4, 5 ]
