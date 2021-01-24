@@ -28,3 +28,21 @@ System.out.print(" " + current);
 uniqueArray = a.filter(function(item, pos) {
     return a.indexOf(item) == pos;
 })
+
+    
+    
+    
+    function uniqueArray(array) {
+  var hashmap = {};
+  var unique = [];
+
+  for(var i = 0; i < array.length; i++) {
+    // If key returns undefined (unique), it is evaluated as false.
+    if(!hashmap.hasOwnProperty(array[i])) {
+      hashmap[array[i]] = 1;
+      unique.push(array[i]);
+    }
+  }
+
+  return unique;
+}
