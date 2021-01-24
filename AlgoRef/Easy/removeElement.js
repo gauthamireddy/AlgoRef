@@ -35,6 +35,23 @@ console.log(arr)
 let forDeletion = [2, 3, 5]
 
 
+
+function uniqueArray(array) {
+  var hashmap = {};
+  var unique = [];
+
+  for(var i = 0; i < array.length; i++) {
+    // If key returns undefined (unique), it is evaluated as false.
+    if(!hashmap.hasOwnProperty(array[i])) {
+      hashmap[array[i]] = 1;
+      unique.push(array[i]);
+    }
+  }
+
+  return unique;
+}
+
+
 const removeDupes = (arr) => {
   let result = [];
   let previous = arr[0];
