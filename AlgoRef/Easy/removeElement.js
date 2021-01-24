@@ -34,6 +34,25 @@ console.log(arr)
 
 let forDeletion = [2, 3, 5]
 
+
+const removeDupes = (arr) => {
+  let result = [];
+  let previous = arr[0];
+  console.log(previous);
+  result[0] = previous;
+  
+  for(let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+    if (arr[i] != previous) {
+      result.push(arr[i]);
+    }
+    
+    previous = arr[i];
+  }
+  
+  return result;
+}
+
 let arr = [1, 2, 3, 4, 5, 3]
 
 arr = arr.filter(item => !forDeletion.includes(item))
