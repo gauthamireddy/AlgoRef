@@ -30,3 +30,36 @@ public static int[] merge(int[] a, int[] b){
 let primes = [...arr1, ...arr2];
 
 let primes = arr1.concat(arr2);
+
+
+let arr = [1,6,7,8,9];
+console.log(mergeArray(arr, [2,3,4,5]))
+
+function mergeArray(arr1, arr2) {
+ var new_array =[]
+ var i = 0,
+     j = 0
+
+
+ while (i < arr1.length && j < arr2.length ) {
+     if (arr1[i] < arr2[j]) {
+         new_array.push(arr1[i]);
+         i++;
+     } else if (arr2[j] < arr1[i]) {
+         new_array.push(arr2[j]);
+         j++;
+     } 
+ }
+
+     while(i < arr1.length) {
+       new_array.push(arr1[i])
+       i++
+     } 
+
+     while(j < arr2.length) {
+       new_array.push(arr2[j])
+       j++
+     }
+ 
+ return new_array;
+}
