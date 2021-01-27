@@ -19,3 +19,28 @@ public class Solution{
         put('M',1000);
     }};
 }
+
+
+//js
+
+const values = new Map([
+  ['I', 1],
+  ['V', 5],
+  ['X', 10]
+  /*....*/
+]);
+
+function romanToInt(string) {
+  let result = 0,
+    current, previous = 0;
+  for (const char of string.split("").reverse()) {
+    current = values.get(char);
+    if (current >= previous) {
+      result += current;
+    } else {
+      result -= current;
+    }
+    previous = current;
+  }
+  return result;
+}
