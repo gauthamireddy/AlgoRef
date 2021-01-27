@@ -1,15 +1,15 @@
 /**
  * Created by ggaddam on 8/21/2016.
  */
-public class power {
-    public double myPow(double x, int n) {
-        if(n == 0) return 1;
-
-        if(n < 0) {
-            n = -n;
-            x = 1 / x;
-        }
-
-        return (n % 2 == 0) ? myPow(x * x, n / 2) : x * myPow(x * x, n / 2);
+function power(x,y){
+         if(y===0){return 1}
+         else if (y%2 ===0){
+             return power(x,parseInt(y/2))*power(x,parseInt(y/2))
+         }else{
+              return x*power(x,parseInt(y/2))*power(x,parseInt(y/2))
+         }
+    
     }
-}
+
+
+console.log(power(3,2))
