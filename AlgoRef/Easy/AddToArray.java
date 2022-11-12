@@ -21,3 +21,10 @@ arr.splice(3,0,4)
 
 // beginning of the array
 arr.unshift(4)
+        
+// merge two arrays with no duplicates
+array_merge = function (arr1, arr2) {
+  return arr1.concat(arr2.filter(function(item){
+    return arr1.indexOf(item) < 0;
+  }))
+}
