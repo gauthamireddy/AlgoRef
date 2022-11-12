@@ -10,7 +10,7 @@ arr.push = 4
 arr.concat([4])
         
 //es6
-console.log([..arr], 4 )
+console.log([...arr, 4 ])
         
 //specific index
         
