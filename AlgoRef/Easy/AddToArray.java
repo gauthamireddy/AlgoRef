@@ -1,5 +1,3 @@
-//not too sure of the last part
-
 public static int[] addPos(int[] a, int pos, int num){
         int[] res = new int[a.length];
         for(int i=0; i<pos; i++)
@@ -39,3 +37,25 @@ public static int[] addPos(int[] a, int pos, int num){
         //copy the address to the old reference
         //the old array values will be deleted by the Garbage Collector
         oldArray = newArray;
+
+
+//more options
+https://stackoverflow.com/questions/351409/how-to-append-something-to-an-array
+
+//end 
+arr[arr.length] = 4
+        
+arr.push = 4
+        
+arr.concat([4])
+        
+//specific index
+        
+let arr = [1,2,3,5]
+arr[3] = 4 
+        
+arr.splice(3,0,4)
+
+// beginning of the array
+arr.unshift(4)
+       
