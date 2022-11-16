@@ -3,6 +3,23 @@ import java.util.*;
 /**
  * Created by ggaddam on 8/21/2016.
  */
+
+var groupAnagrams = function(strs) {
+    const groups = new Map ();
+    
+    for(const str of strs) {
+        const id = str.split('').sort().join('');
+        
+        if(!groups.has(id))
+            groups.set(id, []);
+        
+        groups.get(id).push(str);
+    }
+    
+    return Array.from(groups.values());
+};
+
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
 public class GroupAnagrams {
     public List< List< String > > groupAnagrams(String[] strs) {
         if(strs == null || strs.length == 0) return new ArrayList< List< String > >();
